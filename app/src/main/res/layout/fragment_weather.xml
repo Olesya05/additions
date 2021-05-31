@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="16dp"
+    tools:layout_editor_absoluteY="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCommonBackground"
+        android:padding="16dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/locationTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/hintColor"
+            android:backgroundTint="@color/edit_text_line"
+            android:hint="@string/location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/currentDateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationTv"
+            tools:text="June 6" />
+
+        <TextView
+            android:id="@+id/currentDayTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationTv"
+            tools:text="Monday" />
+
+        <TextView
+            android:id="@+id/currentTemperatureTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="fill"
+            android:textColor="@color/textColor"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="@+id/currentIconImv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/currentIconImv"
+            tools:text="16°C" />
+
+        <TextView
+            android:id="@+id/currentFeelsLikeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentTemperatureTv"
+            tools:text="Feels like 15°C" />
+
+        <ImageView
+            android:id="@+id/currentIconImv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentDateTv"
+            tools:srcCompat="@drawable/icon_cloud" />
+
+        <TextView
+            android:id="@+id/currentWeatherTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/currentFeelsLikeTv"
+            app:layout_constraintEnd_toEndOf="@+id/currentIconImv"
+            app:layout_constraintStart_toStartOf="@+id/currentIconImv"
+            app:layout_constraintTop_toTopOf="@+id/currentFeelsLikeTv"
+            tools:text="Sunny" />
+
+        <TextView
+            android:id="@+id/currentWindSpeedTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentFeelsLikeTv"
+            tools:text="Wind speed: 16 km\h" />
+
+        <TextView
+            android:id="@+id/currentCloudTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentWindSpeedTv"
+            tools:text="Cloud cover: 53%" />
+
+        <TextView
+            android:id="@+id/currentHumidityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentCloudTv"
+            tools:text="Humidity: 82%" />
+
+        <TextView
+            android:id="@+id/currentPrecipitationTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentHumidityTv"
+            tools:text="Precipitation: 10mm" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hourWeatherRv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentPrecipitationTv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

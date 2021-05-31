@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Helper</string>
+
+    <string name="tasks_menu">Tasks</string>
+    <string name="weather_menu">Weather</string>
+
+    <string name="task_text">Task</string>
+    <string name="date_text">Date</string>
+    <string name="done_text">Done?</string>
+    <string name="delete_text">Delete</string>
+    <string name="save_text">Save</string>
+
+    <string name="task_hint">Input task here</string>
+    <string name="date_hint">Input date here</string>
+    <string name="time_hint">Input time here</string>
+
+    <string name="date_picker_title">Pick the date</string>
+    <string name="time_picker_title">Pick the time</string>
+
+    <string name="close_alert_title">Are you sure?</string>
+    <string name="close_alert_text">Close without saving?</string>
+
+    <string name="location">Location</string>
+
+    <string name="current_weather_temperature">%.1f°C</string>
+    <string name="current_weather_feels_like">Feels like %.1f°C</string>
+    <string name="current_weather_wind_speed">Wind speed: %.1f km/h</string>
+    <string name="current_weather_cloud_cover">Cloud cover: %d%%</string>
+    <string name="current_weather_humidity">Humidity: %d%%</string>
+    <string name="current_weather_precipitation">Precipitation: %.1f mm</string>
+
+    <string name="forecast_hour_precipitation_chance">Precip: %d%%</string>
+
+</resources>

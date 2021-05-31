@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCommonBackground">
+
+
+
+
+    <TextView
+        android:id="@+id/taskNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/task_text"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/taskNameEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/task_hint"
+        style="@style/InputEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/taskNameTv"
+        app:layout_constraintTop_toBottomOf="@+id/taskNameTv" />
+
+
+
+    <CheckBox
+        android:id="@+id/taskIsDoneCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/done_text"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="@+id/taskNameEt"
+        app:layout_constraintTop_toBottomOf="@+id/taskNameEt" />
+
+    <TextView
+        android:id="@+id/taskDateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/date_text"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="@+id/taskNameTv"
+        app:layout_constraintTop_toBottomOf="@+id/taskIsDoneCb" />
+
+    <EditText
+        android:id="@+id/taskDateEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="@string/date_hint"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        style="@style/InputEditText"
+        app:layout_constraintEnd_toStartOf="@+id/dateImv"
+        app:layout_constraintStart_toStartOf="@+id/taskDateTv"
+        app:layout_constraintTop_toBottomOf="@+id/taskDateTv" />
+
+    <EditText
+        android:id="@+id/taskTimeEt"
+        style="@style/InputEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/time_hint"
+        android:inputType="date"
+        android:visibility="gone"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintEnd_toStartOf="@+id/timeImv"
+        app:layout_constraintStart_toStartOf="@+id/taskDateEt"
+        app:layout_constraintTop_toBottomOf="@+id/taskDateEt" />
+
+    <ImageView
+        android:id="@+id/dateImv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/taskDateEt"
+        app:layout_constraintEnd_toStartOf="@+id/clearDateBtn"
+        app:layout_constraintTop_toTopOf="@+id/taskDateEt"
+        app:layout_constraintVertical_bias="0.476"
+        app:srcCompat="@drawable/calendar_range" />
+
+    <ImageView
+        android:id="@+id/timeImv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/taskTimeEt"
+        app:layout_constraintEnd_toStartOf="@+id/clearTimeBtn"
+        app:layout_constraintTop_toTopOf="@+id/taskTimeEt"
+        app:srcCompat="@drawable/clock_time_nine_outline" />
+
+    <ImageView
+        android:id="@+id/clearDateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/taskDateEt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taskDateEt"
+        app:srcCompat="@drawable/close_thick" />
+
+    <ImageView
+        android:id="@+id/clearTimeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/taskTimeEt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskDateEt"
+        app:srcCompat="@drawable/close_thick" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:background="@color/colorSecondBackground"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/hourTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:gravity="center"
+        tools:text="12:00" />
+
+    <ImageView
+        android:id="@+id/iconImv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/icon_cloud" />
+
+    <TextView
+        android:id="@+id/precipitationChanceTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:gravity="center"
+        tools:text="Rain: 75%" />
+
+    <TextView
+        android:id="@+id/temperatureTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:gravity="center"
+        tools:text="15°C" />
+</LinearLayout>
